@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="test" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>test</name>
+    <js-module name="test" src="www/test.js">
+        <clobbers target="cordova.plugins.test" />
+    </js-module>
+	
+	<platform name="android">
+		<config-file target="config.xml" parent="/*">
+			<feature name="Echo">
+				<param name="android-package" value="org.apache.cordova.demo.Echo"/>
+			</feature>
+		</config-file>
+	
+	
+	<source-file src="src/android/Echo.java" target-dir="org/apache/cordova/demo"/>
+	</platform>
+</plugin>
